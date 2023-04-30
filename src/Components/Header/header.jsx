@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ThemeContext } from "../context";
+import { ThemeContext } from "../../context";
 
 const Header = () => {
   const { darkMode, setDarkMode } = useContext(ThemeContext);
@@ -33,7 +33,7 @@ const Header = () => {
           className={`btn ${darkMode ? "btn-light" : "btn-dark"} `}
           onClick={changeMode}
         >
-          {darkMode ? "تاریک" : "روشن"}
+          {darkMode ? "روشن" : "تاریک"}
         </button>
       </div>
     </header>

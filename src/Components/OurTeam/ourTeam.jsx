@@ -1,7 +1,7 @@
 import { useState } from "react";
-import useFetchedData from "./useFetchedData";
-import Card from "./Components/card";
-import Pagination from "./Components/pagination";
+import useFetchedData from "../../useFetchedData";
+import Pagination from "../Pagination/pagination";
+import Card from "../Card/card";
 
 const pageSize = 3;
 function OurTeam() {
@@ -21,7 +21,7 @@ function OurTeam() {
             {programmers.data.map(({ id, ...programmer }) => {
               return (
                 <div className="col-4" key={id}>
-                  <Card {...programmer} />
+                  <Card {...programmer}/>
                 </div>
               );
             })}
