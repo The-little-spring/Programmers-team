@@ -1,7 +1,11 @@
 import PropTypes from "prop-types";
 import _ from "lodash";
+import { useContext } from "react";
+import { ThemeContext } from "../../context";
+import "./pagination.css";
 
 const Pagination = ({ pages, setPage, page }) => {
+  const { darkMode } = useContext(ThemeContext);
   const prevPage = () => {
     setPage((oldPage) => {
       let prevPage = oldPage - 1;
@@ -24,9 +28,13 @@ const Pagination = ({ pages, setPage, page }) => {
 
   return (
     <nav>
-      <ul className="pagination d-flex justify-content-center mt-5" dir="rtl">
+      <ul className="pagination d-flex justify-content-center" dir="rtl">
         <li className="page-item">
-          <a href="#" className="page-link" onClick={prevPage}>
+          <a
+            href="#"
+            className={`page-link ${darkMode ? "dark-link" : "light-link"}`}
+            onClick={prevPage}
+          >
             قبلی
           </a>
         </li>
@@ -36,13 +44,20 @@ const Pagination = ({ pages, setPage, page }) => {
             className={`page-item ${index + 1 === page ? "active" : ""}`}
             onClick={() => setPage(index + 1)}
           >
-            <a className="page-link" href="#">
+            <a
+              className={`page-link ${darkMode ? "dark-link" : "light-link"}`}
+              href="#"
+            >
               {index + 1}
             </a>
           </li>
         ))}
         <li className="page-item">
-          <a href="#" className="page-link" onClick={nextPage}>
+          <a
+            href="#"
+            className={`page-link ${darkMode ? "dark-link" : "light-link"}`}
+            onClick={nextPage}
+          >
             بعدی
           </a>
         </li>

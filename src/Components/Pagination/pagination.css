@@ -1,0 +1,11 @@
+.dark-link {
+    color: white;
+}
+
+.dark-link:hover{
+    background-color: white;
+}
+
+.light-link:hover{
+    background-color: rgb(185, 182, 182);
+}
