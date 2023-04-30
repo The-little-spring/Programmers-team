@@ -23,7 +23,7 @@ const Header = () => {
             <a className="nav-link">خدمات</a>
           </li>
           <li className="navbar-item">
-            <a className="nav-link">تیم ما</a>
+            <a className="nav-link active">تیم ما</a>
           </li>
           <li className="navbar-item">
             <a className="nav-link">ارتباط با ما</a>

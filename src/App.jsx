@@ -2,6 +2,7 @@ import { useContext } from "react";
 import "./App.css";
 import Header from "./Components/header";
 import { ThemeContext } from "./context";
+import OurTeam from "./Components/OurTeam/ourTeam";
 
 function App() {
   const { darkMode } = useContext(ThemeContext);
@@ -12,6 +13,7 @@ function App() {
       }`}
     >
       <Header />
+      <OurTeam />
     </div>
   );
 }
