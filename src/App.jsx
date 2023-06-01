@@ -7,7 +7,7 @@ function App() {
   const { darkMode } = useContext(ThemeContext);
   return (
     <div
-      className={`${
+      className={`min-vh-100 ${
         darkMode ? "bg-dark text-light" : "bg-secondary text-dark"
       }`}
     >
